@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video2notes"
+version = "0.1.0"
+description = "Turn a public video into one markdown note: what is said, and what is shown on screen."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    # transcript.get_job_status ships in supadata 1.7.0, which is on GitHub but
+    # not yet on PyPI. Switch this line to "supadata>=1.7.0" once it is published.
+    "supadata @ git+https://github.com/supadata-ai/py@35b369f30ad8c9de10957a922265e51c586b9cc6",
+    "yt-dlp>=2024.1.1",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Multimedia :: Video",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+video2notes = "video2notes.cli:main"
+
+[project.urls]
+Tutorial = "https://www.lrgfrmt.com/lab/video-to-notes"
+Source = "https://github.com/lrgfrmt/video2notes"
+
+[tool.setuptools]
+packages = ["video2notes"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
