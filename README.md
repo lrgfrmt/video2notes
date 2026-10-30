@@ -2,7 +2,7 @@
 
 Turn a public video into one markdown note: what is **said**, and what is **shown on screen**.
 
-<!-- BADGE: operator pastes the official "Powered by Supadata" snippet from the Supadata dashboard here -->
+<a href="https://supadata.ai/r/Z6NXWKCP" rel="sponsored" target="_blank"><img src="https://supadata.ai/badge/powered-by-supadata-light.svg" alt="Powered by Supadata" width="232" height="54" /></a>
 
 ## Why two tracks
 
